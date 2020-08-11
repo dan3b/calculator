@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya&display=swap');
+
+.App {
+  text-align: center;
+  width:100%;
+  min-height:calc(100vh - 12px);
+  padding-bottom:12px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Alegreya', serif;
+}
+
+h1 {
+  margin: 0 0 24px;
+  color: darkolivegreen;
+}
+
+.calculator {
+  font-family:"Helvetica",sans-serif;
+  margin-top:-10px;
+  padding-left:auto;
+  padding-right:auto;
+  width:59vh;
+  height:80vh;
+  display:grid;
+  justify-content:center;
+  background-color: darkolivegreen;
+  border-radius:1.5vh;
+  box-shadow: 0 0.5vh 0.2vh rgba(92, 67, 36, 0.1);
+}
+
+.display {
+  width:50vh;
+  margin:2.5vh 0 0.5vh;
+  padding:2.5vh;
+  height:10vh;
+  background-color: white;
+  text-align:right;
+  font-size:5vh;
+  display:grid;
+  align-items:center;
+  border-radius:1vh;
+  box-shadow: inset 0 0 2vh rgba(92, 67, 36, 0.3);
+}
+
+.buttons {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width:55vh;
+  height:60vh;
+  font-size:3vh;
+}
+
+.button {
+  width: 13vh;
+  height:11vh;
+  background-color: rgb(247, 247, 83);
+  display:grid;
+  align-items:center;
+  border-radius:1vh;
+  box-shadow: 0 0.3vh 0.2vh rgba(0,0,0,0.1);
+}
+
+.button:hover {
+  background-color: DarkKhaki;
+}
+
+.button:active {
+  background-color: gold ;
+  box-shadow: inset 0px 0.5vh 0.2vh rgba(0,0,0,0.1);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 24px);
+  margin: 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+footer li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (max-width:590px) {
+  .calculator {
+    width:100vw;
+    height:calc(100vw*80/59);
+    border-radius:calc(100vw*15/590);
+    align-items:center;
+  }
+
+  .display {
+    align-self:center;
+    width:calc(100vw*500/590);
+    margin:calc(100vw*25/590) 0 calc(100vw*5/590);
+    padding:calc(100vw*25/590);
+    height:calc(100vw*100/590);
+    font-size:calc(100vw*50/590);
+    border-radius:calc(100vw*10/590);
+    box-shadow: inset 0px 0px calc(100vw*20/590) rgba(92, 67, 36, 0.3);
+  }
+
+  .buttons {
+    width:calc(100vw*550/590);
+    height:calc(100vw*600/590);
+    font-size:calc(100vw*30/590);
+  }
+
+  .button {
+    width: calc(100vw*130/590);
+    height:calc(100vw*110/590);
+    border-radius:calc(100vw*10/590);
+    box-shadow: 0px 3px 2px rgba(0,0,0,0.1);
+  }
+
+
+}
